@@ -1,0 +1,12 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/*.svgreactify"],
+      "url": "./node_modules/svg-reactify/json-schema.json"
+    }
+  ],
+  "files.associations": {
+    "*.svgreactify": "jsonc"
+  },
+  "svg.preview.background": "custom"
+}

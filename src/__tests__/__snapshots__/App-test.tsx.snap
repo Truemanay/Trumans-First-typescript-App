@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Running the app Rendering the app should render correctly 1`] = `
+<ForwardRef(NavigationContainer)>
+  <StackNavigator>
+    <Screen
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "type": [Function],
+        }
+      }
+      name="P01"
+      options={
+        Object {
+          "headerShown": false,
+        }
+      }
+    />
+    <Screen
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "type": [Function],
+        }
+      }
+      name="P02"
+      options={
+        Object {
+          "headerShown": false,
+        }
+      }
+    />
+    <Screen
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "type": [Function],
+        }
+      }
+      name="P03"
+      options={
+        Object {
+          "headerShown": false,
+        }
+      }
+    />
+  </StackNavigator>
+</ForwardRef(NavigationContainer)>
+`;

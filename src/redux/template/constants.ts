@@ -1,0 +1,10 @@
+/**
+ * Define action constants to be reused here 'constants.ts'
+ */
+/** *** */
+
+const SAMPLE_FETCH_LOADING = "SAMPLE_FETCH_LOADING";
+const SAMPLE_FETCH_SUCCESS = "SAMPLE_FETCH_SUCCESS";
+const SAMPLE_FETCH_ERROR = "SAMPLE_FETCH_ERROR";
+
+export { SAMPLE_FETCH_LOADING, SAMPLE_FETCH_SUCCESS, SAMPLE_FETCH_ERROR };

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "850492974513",
+    "firebase_url": "https://fastcoach-fc.firebaseio.com",
+    "project_id": "fastcoach-fc",
+    "storage_bucket": "fastcoach-fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850492974513:android:70ff29fdf9db84300a0990",
+        "android_client_info": {
+          "package_name": "com.secretlab.fastcoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850492974513-odrd23a53h56v65rk6j5ohfcec13pmia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXy7aWYjRSWKWnyAmyMteZhf0R8yJTpcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850492974513-odrd23a53h56v65rk6j5ohfcec13pmia.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "850492974513-4k24p03o3r1tvjn0o3p05kppusaefnl7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.secretlab.ketocoachx"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
