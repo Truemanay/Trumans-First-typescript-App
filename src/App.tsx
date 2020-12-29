@@ -6,7 +6,7 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { P01, P02, P03 } from "./screens";
+import { P01, P02 } from "./screens";
 import { kRoute } from "./kRoute";
 
 const Stack = createStackNavigator();
@@ -23,11 +23,6 @@ const App: FC = () => {
         <Stack.Screen
           name={kRoute.P02}
           component={P02}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name={kRoute.P03}
-          component={P03}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

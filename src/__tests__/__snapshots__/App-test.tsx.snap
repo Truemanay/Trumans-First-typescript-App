@@ -33,21 +33,6 @@ exports[`Running the app Rendering the app should render correctly 1`] = `
         }
       }
     />
-    <Screen
-      component={
-        Object {
-          "$$typeof": Symbol(react.memo),
-          "compare": null,
-          "type": [Function],
-        }
-      }
-      name="P03"
-      options={
-        Object {
-          "headerShown": false,
-        }
-      }
-    />
   </StackNavigator>
 </ForwardRef(NavigationContainer)>
 `;
