@@ -1,53 +1,38 @@
 import React, { FC } from "react";
-import { Button, Platform, StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { NavigationProp, ParamListBase } from "@react-navigation/core";
 import { kRoute } from "../kRoute";
+import TestButton from "../components/generated/TestButton";
+import Circle from "../components/generated/Circle";
+import Circle2 from "../components/generated/Circle2";
+import { styles } from "../kStyle";
 
 const P01_Example: FC<{ navigation: NavigationProp<ParamListBase> }> = ({
   navigation,
 }) => {
-  const kInstructions = Platform.select({
-    ios: "Press Cmd+R to reload,\nCmd+D or shake for dev menu",
-    android:
-      "Double tap R on your keyboard to reload,\nShake or press menu button for dev menu",
-    web: "",
-  });
-
+  const navPageTwo = () => {
+    navigation.navigate(kRoute.P02);
+  };
+  const headerText = "Truman's App Co.";
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>
-        Welcome to React Native{Platform.OS === "web" ? " Web" : ""}!
-      </Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-      <Text style={styles.instructions}>{kInstructions}</Text>
-      <Text style={styles.instructions}>This is Page 1!</Text>
-      <Button
-        onPress={() => navigation.navigate(kRoute.P02)}
-        title="Navigate to page 2"
-      />
-      <Button
-        onPress={() => navigation.navigate(kRoute.P03)}
-        title="Navigate to page 3"
-      />
-    </View>
+    <>
+      <View>
+        <View style={styles.P01Header}>
+          <Text style={styles.P01Text}>{headerText}</Text>
+        </View>
+        <Circle style={styles.P01Circle} />
+      </View>
+      <View style={styles.P01Container}>
+        <View style={styles.P01Instructions}>
+          <Text>Press this button and see what happens</Text>
+        </View>
+        <View style={styles.P01Button}>
+          <TestButton TestButton_onPress={navPageTwo} />
+        </View>
+        <Circle2 style={styles.P01CircleSmaller} />
+      </View>
+    </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    flex: 1,
-    justifyContent: "center",
-  },
-  instructions: {
-    marginBottom: 5,
-    textAlign: "center",
-  },
-  welcome: {
-    fontSize: 20,
-    margin: 10,
-    textAlign: "center",
-  },
-});
 
 export const P01 = React.memo(P01_Example);

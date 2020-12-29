@@ -1,42 +1,27 @@
 import React, { FC } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 import { NavigationProp, ParamListBase } from "@react-navigation/core";
+import { kRoute } from "../kRoute";
+import BackButton from "../components/generated/BackButton";
+import Image from "../components/generated/Image";
+import { styles } from "../kStyle";
 
-const P02_Example: FC<{ navigation: NavigationProp<ParamListBase> }> = () => {
-  const kInstructions = Platform.select({
-    ios: "Press Cmd+R to reload,\nCmd+D or shake for dev menu",
-    android:
-      "Double tap R on your keyboard to reload,\nShake or press menu button for dev menu",
-    web: "",
-  });
-
+const P02_Example: FC<{ navigation: NavigationProp<ParamListBase> }> = ({
+  navigation,
+}) => {
+  const navBack = () => {
+    navigation.navigate(kRoute.P01);
+  };
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>
-        Welcome to React Native{Platform.OS === "web" ? " Web" : ""}!
-      </Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-      <Text style={styles.instructions}>{kInstructions}</Text>
-      <Text style={styles.instructions}>This is Page 2!</Text>
+    <View style={styles.P02Container}>
+      <View style={styles.P02Button}>
+        <BackButton BackButton_onPress={navBack} />
+      </View>
+      <View style={styles.P02Image}>
+        <Image />
+      </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    flex: 1,
-    justifyContent: "center",
-  },
-  instructions: {
-    marginBottom: 5,
-    textAlign: "center",
-  },
-  welcome: {
-    fontSize: 20,
-    margin: 10,
-    textAlign: "center",
-  },
-});
 
 export const P02 = React.memo(P02_Example);
